@@ -27,10 +27,20 @@ for (i, imagePath) in enumerate(imagePaths):
     preds = model.predict(np.expand_dims(image, axis=0))[0]
     label = cfg.CLASSES[np.argmax(preds)]
 
-    text = label if label == "Non-Fire" else "Fire"
+    green = (0, 255, 0)
+    red = (0, 0, 255)
+
     output = imutils.resize(output, width=500)
-    cv2.putText(output, text, (35, 50), cv2.FONT_HERSHEY_SIMPLEX,
-                1.0, (0, 255, 0), 5)
+    
+    if label == "Non-Fire":
+        text = "Non-Fire"
+        color = green
+    else:
+        text = "Fire"
+        color = red
+
+    cv2.putText(output, text, (35, 50),
+                cv2.FONT_HERSHEY_SIMPLEX, 1.0, color, 5)
     
     cv2.imshow("", output)
     cv2.waitKey(0)
