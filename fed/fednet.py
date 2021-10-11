@@ -9,7 +9,7 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras import backend as K
 
 
-class FireDetectionNet:
+class FedNet:
     @staticmethod
     def build(width, height, depth, numClasses):
         model = Sequential()
