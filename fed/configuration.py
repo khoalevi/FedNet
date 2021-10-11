@@ -3,6 +3,8 @@ import os
 FIRE_PATH = os.path.sep.join(["datasets", "fire"])
 NON_FIRE_PATH = os.path.sep.join(["datasets", "non_fire"])
 
+VIDEO_PATH = os.path.sep.join(["examples", "lighter.mp4"])
+
 CLASSES = ["Non-Fire", "Fire"]
 
 TRAIN_SPLIT = 0.8
