@@ -1,5 +1,5 @@
 from tensorflow.keras.models import load_model
-from fed import configuration as cfg
+from fed import config as cfg
 from imutils import paths
 import numpy as np
 import imutils
