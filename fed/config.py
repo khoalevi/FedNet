@@ -23,8 +23,9 @@ SAMPLE_SIZE = 10
 DETECT_IMAGES = os.path.sep.join(["datasets", "detection", "images"])
 DETECT_ANNOTS = os.path.sep.join(["datasets", "detection", "annotations"])
 
-GEN_FIRE_PATH = os.path.sep.join(["datasets", "generation", "fire"])
-GEN_NON_FIRE_PATH = os.path.sep.join(["datasets", "generation", "non_fire"])
+GEN_PATH = os.path.sep.join(["datasets", "generation"])
+GEN_FIRE_PATH = os.path.sep.join([GEN_PATH, "fire"])
+GEN_NON_FIRE_PATH = os.path.sep.join([GEN_PATH, "non_fire"])
 
 # define the number of max proposals used when running selective
 # search for gathering training data and performing inference
